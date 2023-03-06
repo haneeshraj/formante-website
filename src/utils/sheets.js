@@ -8,7 +8,9 @@ const addToSheets = async (name, email, number, subject, message) => {
   const client = await auth.getClient();
   const googleSheets = google.sheets({ version: "v4", auth: client });
 
-  const spreadsheetId = process.env.EXCEL_SHEET_ID;
+  const spreadsheetId =
+    process.env.EXCEL_SHEET_ID ||
+    "1TQcVVrjSJRIt2P_cL_8kJcU69Pv5ykf9bipzKhzgOds";
   const metaData = await googleSheets.spreadsheets.get({
     auth,
     spreadsheetId,
