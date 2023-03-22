@@ -2,15 +2,17 @@ import { google } from "googleapis";
 
 const addToSheets = async (name, email, number, subject, message) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: `cred.json`,
+    // keyFile: "./src/utils/cred.json",
+    credentials: {
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    },
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
   const client = await auth.getClient();
   const googleSheets = google.sheets({ version: "v4", auth: client });
 
-  const spreadsheetId =
-    process.env.EXCEL_SHEET_ID ||
-    "1TQcVVrjSJRIt2P_cL_8kJcU69Pv5ykf9bipzKhzgOds";
+  const spreadsheetId = process.env.EXCEL_SHEET_ID;
   const metaData = await googleSheets.spreadsheets.get({
     auth,
     spreadsheetId,
