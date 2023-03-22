@@ -2,7 +2,7 @@ import { google } from "googleapis";
 
 const addToSheets = async (name, email, number, subject, message) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: "./src/utils/cred.json",
+    keyFile: `cred.json`,
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
   const client = await auth.getClient();
