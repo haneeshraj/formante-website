@@ -49,12 +49,26 @@ export default function Home() {
       return toast.error("Please write a message", { theme: "dark" });
     }
     // Posting using axios
-    await axios.post("/api/add", {
-      name: name,
-      email: email,
-      number: number,
-      subject: subject,
-      message: message,
+    // await axios.post("/api/add", {
+    //   name: name,
+    //   email: email,
+    //   number: number,
+    //   subject: subject,
+    //   message: message,
+    // });
+
+    await fetch("/api/add", {
+      method: "POST",
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        number: number,
+        subject: subject,
+        message: message,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
     });
 
     return toast.success(
