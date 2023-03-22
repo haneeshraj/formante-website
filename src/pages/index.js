@@ -10,6 +10,7 @@ import Spotify from "@/Components/Logos/Spotify";
 import Youtube from "@/Components/Logos/Youtube";
 import Instagram from "@/Components/Logos/Instagram";
 import Discord from "@/Components/Logos/Discord";
+import Expand from "@/Components/Icons/Expand";
 import axios from "axios";
 export default function Home() {
   const [name, setName] = useState("");
@@ -75,24 +76,75 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.container}>
-        <section
-          style={{ paddingTop: "0" }}
-          className={`${styles.section} ${styles.intro} `}
-        >
-          <div className={` ${styles.center}`}>
-            <div className={`${styles.content}`}>
-              <div className={styles.introWrapper}>
-                <div className={styles.introFiler}></div>
+        <section className={`${styles.introduction}`}>
+          <div className={styles.introText}>
+            <h1>THE FORMANTE</h1>
+            <h3>RECORDING SERVICES</h3>
+            <p>{`Welcome to The Formante Recording Services! If you're looking for a professional recording service that can cater to your needs wherever you are, you've come to the right place. Get in touch with me today and let's make some great music together :)`}</p>
+          </div>
+          <Link href={"#qna"} scroll={false}>
+            <div className={styles.introIcon}>
+              <Expand />
+            </div>
+          </Link>
+        </section>
+        <section className={`${styles.section} ${styles.qna}`} id="qna">
+          <h1 className={styles.sectionHeading}>About Me</h1>
+          <div className={styles.center}>
+            <div className={`${styles.aboutGrid} ${styles.content}`}>
+              <div className={styles.aboutItem}>
+                <h1 className={styles.aboutQuestion}>
+                  Who is The Formante? Tell us about yourself.
+                </h1>
+                <p className={styles.aboutAnswer}>
+                  {`My name is Yedu Renjith, and I'm from Kerala, India.
+                  Currently, I'm a student at Cape Breton University, Canada.
+                  I've been producing music for over 5 years, mostly under the
+                  artist name “Candy Heist”. Further, I've been freelancing my
+                  services since the last 2 years and have worked with multiple
+                  artists around the world, primarily in my local scene. With years of experience in the music industry, I am committed to providing top-notch recording, production, and mixing and mastering services to help you create the best possible version of your music. As a mobile recording engineer, I am available to travel to your location and record your music in the comfort of your own environment. `}
+                </p>
+              </div>
+              <div className={styles.imageAbout}>
+                <div className={styles.imageOverlay} />
+
                 <Image
-                  src={"/images/1.jpg"}
-                  alt={"bruh"}
-                  fill
-                  sizes="(max-width: 768px) 100vw,"
-                  className={styles.mainImage}
+                  src="/images/7.JPG"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="me"
+                  style={{ borderRadius: "0.5rem" }}
+                />
+              </div>
+              <div className={styles.aboutItem}>
+                <h1 className={styles.aboutQuestion}>
+                  Describe your professional experience.
+                </h1>
+                <p className={styles.aboutAnswer}>
+                  {`I started actively freelancing from the beginning of the COVID-19 pandemic, around March 2020. From then, I've worked with different kinds of artists making unique music. Most of my professional experience was with mixing vocals for rappers and singers. Regardless, I've worked on projects of different scales, providing full mix and masters and additional production services.`}
+                </p>
+              </div>
+              <div className={styles.aboutItem}>
+                <h1 className={styles.aboutQuestion}>Why should I hire you?</h1>
+                <p className={styles.aboutAnswer}>
+                  {`I offer competitive rates for my services, without compromising on quality. I understand that every project is unique, and I work with my clients to create a customized package that fits their needs and budget. Furthermore, I pride myself on my ability to communicate effectively with my clients, to ensure that their vision for their project is fully realised. I am always open to feedback and input, and work closely with my clients to achieve the desired result.`}
+                </p>
+              </div>
+              <div className={styles.imageAbout}>
+                <div className={styles.imageOverlay} />
+                <Image
+                  src="/images/8.JPG"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="me"
+                  style={{ borderRadius: "0.5rem" }}
                 />
               </div>
             </div>
           </div>
+        </section>
+        <section className={`${styles.section} ${styles.services}`}>
+          <h1 className={styles.sectionHeading}>Services</h1>
         </section>
         <section className={`${styles.section} ${styles.work}`}>
           <h1 className={styles.sectionHeading}>Work</h1>
@@ -138,7 +190,7 @@ export default function Home() {
               </div>
               <div className={styles.workItem}>
                 <div className={styles.center}>
-                  <div className={styles.edmbeer}>
+                  <div className={styles.embeder}>
                     <iframe
                       width="100%"
                       height="100%"
