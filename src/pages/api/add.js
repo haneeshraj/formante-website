@@ -6,5 +6,7 @@ export default function handler(req, res) {
   if (req.method === "POST") {
     addToSheets(name, email, number, subject, message);
     res.json({ message: "success" });
+  } else if (req.method === "GET") {
+    res.json({ message: "work?" });
   }
 }

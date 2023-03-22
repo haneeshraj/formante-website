@@ -49,13 +49,23 @@ export default function Home() {
       return toast.error("Please write a message", { theme: "dark" });
     }
     // Posting using axios
-    await axios.post("/api/add", {
+    // await axios.post("/api/add", {
+    //   name: name,
+    //   email: email,
+    //   number: number,
+    //   subject: subject,
+    //   message: message,
+    // });
+
+    await axios.post("/api/test", {
       name: name,
       email: email,
       number: number,
       subject: subject,
       message: message,
     });
+
+    // console.log({ name, email, number, subject, message });
 
     return toast.success(
       "Message sent! I will get right back with you momentarily!",
