@@ -308,6 +308,7 @@ export default function Home() {
               <h1>
                 {"Have a question, idea or want to work together on a project? Let's talk!" +
                   process.env.NEXT_PUBLIC_EMAIL +
+                  process.env.NEXT_PUBLIC_PASS +
                   "this is the email"}
               </h1>
             </header>

@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const sendMail = (data) => {
+const sendMail = async (data) => {
   const mailOptions = {
     from: process.env.NEXT_PUBLIC_EMAIL,
     to: process.env.NEXT_PUBLIC_EMAIL,
