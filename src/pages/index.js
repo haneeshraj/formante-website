@@ -57,14 +57,6 @@ export default function Home() {
     //   message: message,
     // });
 
-    await axios.post("/api/test", {
-      name: name,
-      email: email,
-      number: number,
-      subject: subject,
-      message: message,
-    });
-
     // console.log({ name, email, number, subject, message });
 
     return toast.success(
