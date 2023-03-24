@@ -319,10 +319,9 @@ export default function Home() {
           <div className={`${styles.content}`} style={{ marginInline: "auto" }}>
             <header className={styles.contactHeader}>
               <h1>
-                {"Have a question, idea or want to work together on a project? Let's talk!" +
-                  process.env.NEXT_PUBLIC_EMAIL +
-                  process.env.NEXT_PUBLIC_PASS +
-                  "this is the email"}
+                {
+                  "Have a question, idea or want to work together on a project? Let's talk!"
+                }
               </h1>
             </header>
             <form className={styles.form}>
