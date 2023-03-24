@@ -57,13 +57,26 @@ export default function Home() {
     //   message: message,
     // });
 
-    await axios.post("/api/test", {
-      name: name,
-      email: email,
-      number: number,
-      subject: subject,
-      message: message,
-    });
+    // NODE MAILER
+    // await axios.post("/api/test", {
+    //   name: name,
+    //   email: email,
+    //   number: number,
+    //   subject: subject,
+    //   message: message,
+    // });
+
+    try {
+      await fetch(`/api/send`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, number, subject, message }),
+      });
+    } catch (error) {
+      console.error(error);
+    }
 
     // console.log({ name, email, number, subject, message });
 
