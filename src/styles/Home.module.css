@@ -116,7 +116,7 @@
       rgba(0, 25, 4, 0.6) 100%,
       rgb(16, 16, 16) 100%
     ),
-    url("/images/1.PNG");
+    url("/images/1.png");
   background-size: cover;
   background-position: 38% center;
   display: grid;
@@ -571,7 +571,7 @@
         rgba(0, 25, 4, 0.6) 100%,
         rgba(0, 25, 4, 0.6) 100%
       ),
-      url("/images/1.PNG");
+      url("/images/1.png");
     background-size: cover;
     background-position: 70% center;
     display: grid;
