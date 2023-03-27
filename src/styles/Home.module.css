@@ -30,7 +30,7 @@
       var(--background) 25%,
       rgba(0, 25, 4, 0.62) 100%
     ),
-    url("/images/1.JPG");
+    url("/images/6.JPG");
   background-size: cover;
   background-position: 70% center;
   display: flex;
@@ -70,6 +70,7 @@
   bottom: 0;
   animation: ScrollTo 3s infinite;
   animation-timing-function: cubic-bezier(0.87, 0, 0.25, 0.98);
+  user-select: none;
 }
 
 /* !ABOUT */
@@ -105,6 +106,53 @@
 }
 .imageAbout:hover .imageOverlay {
   background-color: rgba(0, 20, 4, 0);
+}
+
+/* !SERVICES */
+
+.serviceGrid {
+  background: linear-gradient(
+      357.41deg,
+      rgba(0, 25, 4, 0.6) 100%,
+      rgb(16, 16, 16) 100%
+    ),
+    url("/images/1.PNG");
+  background-size: cover;
+  background-position: 38% center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  filter: saturate(50%);
+}
+
+.serviceGridItem {
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  transition: background-color 300ms,
+    transform 400ms cubic-bezier(0.01, 1.12, 0.65, 1.27);
+}
+
+.serviceGridItem h1 {
+  margin-bottom: 1rem;
+  color: var(--green);
+  text-align: center;
+}
+
+.serviceSubGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+.serviceSubGrid p {
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 300ms,
+    transform 400ms cubic-bezier(0.01, 1.12, 0.65, 1.27);
 }
 
 /* !WORK */
@@ -516,6 +564,68 @@
     height: 100%;
     border-radius: 1rem;
   }
+
+  .serviceGrid {
+    background: linear-gradient(
+        357.41deg,
+        rgba(0, 25, 4, 0.6) 100%,
+        rgba(0, 25, 4, 0.6) 100%
+      ),
+      url("/images/1.PNG");
+    background-size: cover;
+    background-position: 70% center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    filter: saturate(50%);
+  }
+
+  .serviceGridItem {
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    transition: background-color 300ms,
+      transform 400ms cubic-bezier(0.01, 1.12, 0.65, 1.27);
+  }
+
+  .serviceGridItem h1 {
+    margin-bottom: 1rem;
+    color: var(--green);
+  }
+
+  .serviceGridItem:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .serviceSubGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+  }
+  .serviceSubGrid p {
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 300ms,
+      transform 400ms cubic-bezier(0.01, 1.12, 0.65, 1.27);
+  }
+
+  .serviceGrid:hover .serviceGridItem {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .serviceGridItem:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  .serviceSubGrid p:hover {
+    transform: translateY(-0.5rem);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
   .workGrid {
     grid-template-columns: repeat(2, 1fr);
   }

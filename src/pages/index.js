@@ -105,7 +105,7 @@ export default function Home() {
             <h3>RECORDING SERVICES</h3>
             <p>{`Welcome to The Formante Recording Services! If you're looking for a professional recording service that can cater to your needs wherever you are, you've come to the right place. Get in touch with me today and let's make some great music together :)`}</p>
           </div>
-          <Link href={"#qna"} scroll={false}>
+          <Link href={"#qna"} scroll={false} style={{ userSelect: "none" }}>
             <div className={styles.introIcon}>
               <Expand />
             </div>
@@ -120,12 +120,7 @@ export default function Home() {
                   Who is The Formante? Tell us about yourself.
                 </h1>
                 <p className={styles.aboutAnswer}>
-                  {`My name is Yedu Renjith, and I'm from Kerala, India.
-                  Currently, I'm a student at Cape Breton University, Canada.
-                  I've been producing music for over 5 years, mostly under the
-                  artist name “Candy Heist”. Further, I've been freelancing my
-                  services since the last 2 years and have worked with multiple
-                  artists around the world, primarily in my local scene. With years of experience in the music industry, I am committed to providing top-notch recording, production, and mixing and mastering services to help you create the best possible version of your music. As a mobile recording engineer, I am available to travel to your location and record your music in the comfort of your own environment. `}
+                  {`My name is Yedu Renjith, and I’m from Kerala, India. Currently, I’m a student at Cape Breton University, Canada. I’ve been producing music for over 5 years, mostly under the artist name “Candy Heist”. Further, I’ve been freelancing my services since the last 2 years and have worked with multiple artists around the world, primarily in my local scene.  `}
                 </p>
               </div>
               <div className={styles.imageAbout}>
@@ -168,6 +163,40 @@ export default function Home() {
         </section>
         <section className={`${styles.section} ${styles.services}`}>
           <h1 className={styles.sectionHeading}>Services</h1>
+          <div className={`${styles.center} `}>
+            <div className={`${styles.serviceGrid} ${styles.content}`}>
+              <div className={styles.serviceGridItem}>
+                <h1>
+                  Recording <strong>[Only provided locally]</strong>
+                </h1>
+                <p>
+                  {`If you're a recording artist in or around Sydney, I can travel
+                  to your location with my equipment to set up a home studio.
+                  The rates for travel is not additional to my hourly rate.`}
+                </p>
+              </div>
+              <div className={styles.serviceGridItem}>
+                <h1>Music Production</h1>
+                <p>
+                  {`Depending on your stylistic description, I can produce jingles for advertisements and even instrumentals for vocalists and rappers.`}
+                </p>
+              </div>
+              <div className={styles.serviceGridItem}>
+                <h1 style={{ textAlign: "center" }}>Mixing & Mastering</h1>
+                <div className={styles.serviceSubGrid}>
+                  <p>
+                    {`With my 6 years of expertise in the craft, I can assure an exceptional quality in my mixes. `}
+                  </p>
+                  <p>
+                    {`I prefer working with dry stems with no busses as this gives me full control of the sound.`}
+                  </p>
+                  <p>
+                    {`Depending on the sound of your song, I can master your track uniquely, offering a bright, clean sound.`}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section className={`${styles.section} ${styles.work}`}>
           <h1 className={styles.sectionHeading}>Work</h1>
@@ -314,6 +343,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className={`${styles.section} ${styles.contact}`}>
           <h1 className={styles.sectionHeading}>Contact me</h1>
           <div className={`${styles.content}`} style={{ marginInline: "auto" }}>
