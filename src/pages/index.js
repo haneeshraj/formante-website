@@ -131,7 +131,7 @@ export default function Home() {
                   layout="fill"
                   objectFit="cover"
                   alt="me"
-                  style={{ borderRadius: "0.5rem" }}
+                  style={{ borderRadius: "1rem" }}
                 />
               </div>
               <div className={styles.aboutItem}>
@@ -155,7 +155,7 @@ export default function Home() {
                   layout="fill"
                   objectFit="cover"
                   alt="me"
-                  style={{ borderRadius: "0.5rem" }}
+                  style={{ borderRadius: "1rem" }}
                 />
               </div>
             </div>
@@ -343,7 +343,29 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        <section className={`${styles.section} ${styles.reviews}`}>
+          <h1 className={styles.sectionHeading}>Reviews</h1>
+          <div className={styles.center}>
+            <div className={`${styles.reviewsGrid} ${styles.content}`}>
+              <div className={styles.reviewsGridItem}>
+                <p>{`Just perfect. A Quick and professional job. Candyheist is also very kind and fun to work with. For sure we will work again soon. And as candyheist told me I'm telling you you: You will not regret!`}</p>
+                <h3>-Fiverr</h3>
+              </div>
+              <div className={styles.reviewsGridItem}>
+                <p>{`Candy Heist The best you can get! quick delivey, great comunication, very reliable and professional. Thank you so much! I'm waiting for the next gig together`}</p>
+                <h3 style={{ marginTop: "2rem" }}>-Fiverr</h3>
+              </div>
+              <div className={styles.reviewsGridItem}>
+                <p>{`They were soooo helpful, i had a back and forth with them about the mix and they were more than happy to revisit it when i wanted an honestly really small change, 100% recommend`}</p>
+                <h3>-Fiverr</h3>
+              </div>
+              <div className={styles.reviewsGridItem}>
+                <p>{`He is the best! I work only with him (:`}</p>
+                <h3 style={{ marginTop: "4rem" }}>-Fiverr</h3>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className={`${styles.section} ${styles.contact}`}>
           <h1 className={styles.sectionHeading}>Contact me</h1>
           <div className={`${styles.content}`} style={{ marginInline: "auto" }}>
